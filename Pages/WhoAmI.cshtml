@@ -1,0 +1,15 @@
+@page
+@model WhoAmI
+@{
+    ViewData["Title"] = "Who are you?";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to tell me your name and also draw a picture of yourself.</p>
+
+<form action="" method="post">
+    <input type="text" asp-for="Drawer.Name" placeholder="What is your name?"   >
+    <input type="text" asp-for="Drawer.Picture" placeholder="Draw yourself?"   >
+    <button type="submit">Submit</button>
+
+</form>

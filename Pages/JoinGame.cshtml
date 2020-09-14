@@ -1,0 +1,27 @@
+@page
+@model JoinGame
+@{
+    ViewData["Title"] = "Join the game!";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Enter the game code and tell us about yourself...</p>
+
+<form action="" method="post">
+    <hr>
+    <label asp-for="Player.GameID">Please enter the Game Id: </label> 
+    <input type="text" asp-for="Player.GameID" placeholder="Game Code" >
+    <br>
+    <br>
+    <label asp-for="Player.PlayerName">Please enter your name: </label> 
+    <input type="text" asp-for="Player.PlayerName" placeholder="Name"   >
+    <br>
+    <br>
+    <input type="checkbox" data-val="true" data-val-required="The IsChecked field is required." id="IsDrawing" name="IsDrawing" value="true">    
+    <label for="IsDrawing">Are you drawing? </label>
+    <br> 
+    <br>
+    <hr>  
+    <button type="submit">Submit</button>
+
+</form>
