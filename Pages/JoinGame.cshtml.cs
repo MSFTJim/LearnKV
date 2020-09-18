@@ -60,7 +60,14 @@ namespace Timmy.Pages
            
             var builder = new SqlConnectionStringBuilder(
                 Configuration["ConnectionStrings:defaultConnection"]);
-                builder.Password = Configuration["C19GameNightKey"];
+                
+                
+            var KVData = Configuration.GetValue<string>("DrawDBPW");
+
+            //DrawDBPW
+                
+                //builder.Password = Configuration["C19GameNightKey"];
+                builder.Password = Configuration.GetValue<string>("DrawDBPW");
               
                 var bobo = builder.ConnectionString;
             
